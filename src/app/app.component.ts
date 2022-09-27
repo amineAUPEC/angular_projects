@@ -9,4 +9,10 @@ import sampleData from '../assets/data.json';
 export class AppComponent {
   title = 'coffee';
   Users: any = sampleData;
+  setMode = false;
+
+  receiveMode($event) {
+    this.setMode = $event;
+    console.log("CURRENT MODE", this.setMode);
+  }
 }
